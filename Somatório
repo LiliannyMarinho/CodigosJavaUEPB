@@ -1,0 +1,27 @@
+package CodigosAulas;
+import java.util.Scanner;
+
+//1+2+3+4+5 = 15.
+public class AtividadeLPcod1 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int num;
+		System.out.printf("Usuário, informe um número e descubra sua somatória: ");
+		num = scan.nextInt();
+		System.out.printf("Somatório: "+soma(num));
+
+	}
+	public static int soma(int n) {
+		if(n==0) {
+			return 0;
+		}
+		else if(n<1) {
+			return -1;
+		}
+		else {
+			return soma(n-1) + n;
+		}
+	}
+
+}
