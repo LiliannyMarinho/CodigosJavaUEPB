@@ -1,0 +1,37 @@
+package CodigosAulas;
+import java.util.Scanner;
+public class Aula0504cod5 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Filme filme1 = new Filme();
+		
+		int i;
+		for(i=0;i<3;i++) {
+		System.out.println("Nome do filme: ");
+		filme1.nome[i] = scan.nextLine();
+		System.out.println("Nome do autor: ");
+		filme1.autor[i] = scan.nextLine();
+		System.out.printf("Ano: ");
+		filme1.ano[i] = scan.nextInt();
+		System.out.printf("Preço: ");
+		filme1.preco[i] = scan.nextFloat();
+		scan.nextLine();
+		}
+		System.out.println();
+		for(i=0;i<3;i++) {
+			System.out.println("Nome: "+filme1.nome[i]);
+			System.out.println("Autor: "+filme1.autor[i]);
+			System.out.println("Ano: "+filme1.ano[i]);
+			System.out.println("Preço: "+filme1.preco[i]);
+			System.out.println();
+		}
+	}
+
+}
+	class Filme{
+    String nome[] = new String[3];
+    String autor[] = new String[3];
+    int ano[] = new int[3];
+    float preco[] = new float[3];
+}
